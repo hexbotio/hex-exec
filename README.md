@@ -9,7 +9,10 @@ Plugin to run commands locally.
   "actions": [
     {
       "type": "hex-local",
-      "command": "df -h"
+      "command": "df -h",
+      "config": {
+        "env": "MY_PATH=/tmp; MY_VAR=xyz"
+      }
     }
   ]
 }

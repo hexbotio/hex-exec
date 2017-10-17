@@ -18,6 +18,9 @@ func (g *HexLocal) Perform(args hexplugin.Arguments) (resp hexplugin.Response) {
 	var o bytes.Buffer
 	var e bytes.Buffer
 	c := exec.Command("/bin/sh", "-c", args.Command)
+	if args.Config["dir"] != "" {
+		c.Dir = args.Config["dir"]
+	}
 	if args.Config["env"] != "" {
 		envs := strings.Split(args.Config["env"], ";")
 		for i, env := range envs {

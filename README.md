@@ -11,7 +11,8 @@ Plugin to run commands locally.
       "type": "hex-local",
       "command": "df -h",
       "config": {
-        "env": "MY_PATH=/tmp; MY_VAR=xyz"
+        "env": "MY_PATH=/tmp; MY_VAR=xyz",
+        "dir": "/tmp"
       }
     }
   ]
